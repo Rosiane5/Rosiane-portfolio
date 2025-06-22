@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = 3000; // // Porta onde o servidor vai rodar localmente.
+const PORT = process.env.PORT ||  3000; // // Porta onde o servidor vai rodar localmente.
 
 app.use(cors({
   origin: '*'  // aceita qualquer origem, para facilitar testes
