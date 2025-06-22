@@ -164,7 +164,7 @@
         color: #C9A227;
         border-left: 1px solid   #C9A227;
         right: -10px;
-        animation: cursor  .8s infinite, digita 10s steps(15) infinite;
+        animation: cursor  0.8s infinite, digita 10s steps(15) infinite;
         width: calc(100% + 13px);
         background-color: #291501;
     }
