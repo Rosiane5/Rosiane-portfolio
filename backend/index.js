@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const express = require('express'); // Criando servidor HTTP
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
@@ -11,7 +10,7 @@ const PORT = process.env.PORT ||  3000; // // Porta onde o servidor vai rodar lo
 app.use(cors({
   origin: '*'  // aceita qualquer origem, para facilitar testes
 }));
-app.use(bodyParser.json());
+app.use(express.json());
 
 const transporter = nodemailer.createTransport({
   host: 'smtp-relay.brevo.com',
