@@ -142,7 +142,7 @@ form.addEventListener("submit", async (e) => {
   // Envia os dados para a API/backend local
   
   try {
-    const resposta = await fetch('http://localhost:3000/enviar', {
+    const resposta = await fetch('https://portfolio-api-ayj5.onrender.com/enviar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(dados)
