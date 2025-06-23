@@ -17,8 +17,8 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-  user: process.env.EMAIL_USER || '8fd3f0001@smtp-brevo.com',
-  pass: process.env.EMAIL_PASS || ''
+  user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS 
   },
   logger: true,
   debug: true
@@ -35,7 +35,7 @@ app.post('/enviar', async (req, res) => {
     }
 
     const mailOptions = {
-      from: '8fd3f0001@smtp-brevo.com',
+      from: process.env.EMAIL_USER,
       to: 'rosianerosa5@gmail.com',
       subject: `Mensagem de ${dados.nome}`,
       text: `Nome: ${dados.nome}\nEmail: ${dados.email}\nMensagem: ${dados.mensagem}`
